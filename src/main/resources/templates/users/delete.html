@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+	<title>Harmony 회원 탈퇴</title>
+	<link rel="stylesheet" href="/css/users/delete.css">
+	<script>
+		 function submitForm() {
+            var password = document.getElementById("password").value;
+
+            if (password === "") {
+                alert("비밀번호를 입력해주세요.");
+                return;
+            }
+
+            document.getElementById("deleteAccountForm").submit();
+        }
+
+        // 팝업 창이 닫힐 때 호출되는 함수
+        
+	</script>
+</head>
+
+<body>
+	<div class="h-logo flex">
+		<img class="flex" src="/img/common/harmony-logo.png">
+	</div>
+	<div>
+		<form id="deleteAccountForm" method="post" action="/users/delete">
+			<label for="password">회원을 탈퇴하시려면 현재 비밀번호를 입력해주세요.</label>
+			<input type="password" id="password" name="password" required>
+			<button type="button" onclick="submitForm()">Harmony 회원 탈퇴</button>
+		</form>
+	</div>
+</body>
+
+</html>

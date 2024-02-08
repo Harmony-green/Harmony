@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/common/reset-css.css" />
+		<link rel="stylesheet" href="/css/users/login.css" />
+		<script type="text/javascript" src="/js/users/login.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<title>Harmony 로그인</title>
+	</head>
+	<body>
+		<div class="loginlayout">
+			<div class="loginmenu">
+				<div>
+					<a href="/"><img src="/img/common/harmony-logo.png" class="llogo"></a>
+				</div>
+				<div class="llogofontsize">
+					H 로그인
+				</div>
+				
+				<form action="/users/login" method="post">
+					<div th:if="${param.sessionError}" th:text="${'현재 로그아웃 상태입니다. 로그인후 이용하세요!'}" class="session-msg"></div>
+					<div class="email">
+						<div class="login-t">
+							아이디
+						</div>
+						<input type="text" placeholder="이메일 주소를 입력해주세요" name="email" class="email" id="emaillog">
+					</div>
+					<div class="password">
+						<div class="login-t">
+							비밀번호
+						</div>
+						<input type="password" placeholder="비밀번호를 입력해주세요" name="pass" class="password" id="passlog">
+					</div>
+					<input type="submit" value="로그인">
+				</form>
+				<div class="sub">
+					<h3>
+						간편하게 시작하기
+					</h3>
+					<div class="social">
+						<div class="socialgroup">
+							<a href="/oauth2/authorization/google"><img src="/img/users/login/google.png"></a>
+							<a href="/oauth2/authorization/naver"><img src="/img/users/login/naver.png"></a>
+							<a href="/oauth2/authorization/kakao"><img src="/img/users/login/kakao.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

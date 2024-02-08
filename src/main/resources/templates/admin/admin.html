@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<th:block th:replace="~{common/admin-layout::head}" />
+		<link rel="stylesheet" href="/css/admin/dashboard.css">
+	</head>
+	<body>
+		<main class="flex">
+			<h1>관리자페이지</h1>
+			<th:block th:replace="~{common/admin-layout::admin-layout}" />
+			<h1>관리자 컨텐츠</h1>
+			<section class="admin-right admin-main flex">
+				<div class="dashboard flex">
+					<div><button id="salesRateBtn" onclick="openSalesRate()">연도별 판매량</button></div>
+					<span></span>
+					<div><button id="visitorsBtn" onclick="openVisitors()">월별 방문자 추이</button></div>
+					<span></span>
+					<div><button id="newOutBtn" onclick="openNewOut()">월별 신규가입자,탈퇴회원</button></div>
+					<span></span>
+					<div><button id="ratingBtn" onclick="openRating()">고객 등급현황</button></div>
+				</div>
+					<figure class="highcharts-figure all-chart flex">
+					    <div id="salesRate"></div>
+					    <div id="visitors"></div>
+					    <div id="newOut"></div>
+					    <div id="rating"></div>
+					</figure>
+					<script src="https://code.highcharts.com/highcharts.js"></script>
+					<script src="https://code.highcharts.com/modules/series-label.js"></script>
+					<script src="https://code.highcharts.com/modules/exporting.js"></script>
+					<script src="https://code.highcharts.com/modules/export-data.js"></script>
+					<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+					<script src="/js/admin/chart.js"></script>
+			</section>
+		</main>
+	</body>
+</html>

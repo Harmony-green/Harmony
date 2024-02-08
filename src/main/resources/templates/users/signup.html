@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/common/reset-css.css" />
+		<link rel="stylesheet" href="/css/users/signup.css" />
+		<script type="text/javascript" src="/js/users/signup.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<title>Harmony 회원가입</title>
+	</head>
+	<body>
+		<div class="signup-layout">
+			<div class="signup-menu">
+				<div class="signup-menu-1">
+					<span>
+						<a href="/"><img src="/img/common/harmony-logo.png" class="signup-logo"></a>
+					</span>
+					<div class="signup-text1">
+						통합회원 가입
+					</div>
+					<form action="/users/signup" method="post">
+						<div class="e-form">
+							<div class="e-form-1">
+								이메일아이디
+							</div>
+							<div class="input-b">
+								<input type="text" class="email" placeholder="이메일 주소를 입력해주세요" name="email">
+								<button id="checkEmail" type="button">이메일 인증</button>
+							</div>
+							<div id="checkarea" class="e-checkarea flex">
+								<input type="text" class="e-check" placeholder="인증번호를 입력해주세요" id="memailconfirm">
+								<button id="confirmBtn" type="button">인증확인</button>
+							</div>
+						</div>
+						<div class="p-form">
+							<div class="p-form-1">
+								비밀번호
+							</div>
+							<div>
+								<input type="password" class="password" placeholder="비밀번호를 입력해주세요" name="pass">
+							</div>
+						</div>
+						<div class="pa-form">
+							<div class="pa-form-1">
+								비밀번호 확인
+							</div>
+							<div>
+								<input type="password" class="password-a" placeholder="비밀번호를 다시 입력해주세요" name="dummy">
+							</div>
+						</div>
+						<div class="n-form">
+							<div class="n-form-1">
+								이름
+							</div>
+							<div>
+								<input type="text" class="name" placeholder="이름을 입력해주세요" name="name">
+							</div>
+						</div>
+						<div class="phone-form">
+							<div class="phone-form-1">
+								전화번호
+							</div>
+							<div>
+								<input type="text" class="phone" placeholder="전화번호를 입력해주세요" name="phone">
+							</div>
+						</div>
+						<div class="signup-menu-2">
+							<div class="signup-b">
+								<input type="submit" value="가입 완료">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

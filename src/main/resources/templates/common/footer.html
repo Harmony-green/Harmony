@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmln:th="http://www.thymeleaf.org">
+	<footer>
+		<h1>푸터영역</h1>
+		<section class="foot1 view-size-pc flex-pc between">
+			<div class="flex-pc">
+				<div class="foot-logo flex-pc">
+					<div><img src="/img/common/harmony-logo.png"></div>
+				</div>
+				<div class="introduce">
+					<p>하모니 주식회사</p>
+					<p>팀장 : 인성빈</p>
+					<p>부팀장 : 박승환</p>
+					<p>서기 : 고형철</p>
+					<p>타임키퍼 : 조영진</p>
+				</div>
+			</div>
+			<div>
+				<div id="map" style="width:300px;height:300px;"></div>
+			</div>
+		</section>
+		<script>
+			var HOME_PATH = window.HOME_PATH || '.';
+
+			var cityhall = new naver.maps.LatLng(37.6570932, 127.062256),
+			    map = new naver.maps.Map('map', {
+			        center: cityhall.destinationPoint(0, 10),
+			        zoom: 18
+			    }),
+			    marker = new naver.maps.Marker({
+			        map: map,
+			        position: cityhall
+			    });
+			
+			var contentString = [
+			        '<div class="iw_inner">',
+			        '   <h3>Harmony</h3>',
+			        '   <p>서울특별시 노원구 상계동 593-1 화일빌딩 3층<br />',
+			        '       <img src="/img/common/harmony-logo.png" width="40" height="40" alt="서울시청" class="thumb" /><br />',
+			        '       <br />',
+			        '   </p>',
+			        '</div>'
+			    ].join('');
+			
+			var infowindow = new naver.maps.InfoWindow({
+			    content: contentString
+			});
+			
+			naver.maps.Event.addListener(marker, "click", function(e) {
+			    if (infowindow.getMap()) {
+			        infowindow.close();
+			    } else {
+			        infowindow.open(map, marker);
+			    }
+			});
+			
+			infowindow.open(map, marker);
+		</script>
+		<section class="foot2 view-size-pc">
+			
+		</section>
+	</footer>
+</html>

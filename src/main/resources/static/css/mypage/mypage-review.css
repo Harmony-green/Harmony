@@ -1,0 +1,4 @@
+@charset "UTF-8";
+.mypage-main .mypage-left> :nth-child(4){
+	font-weight: bold;
+}

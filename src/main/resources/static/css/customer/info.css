@@ -1,0 +1,287 @@
+@charset "UTF-8";
+.head3 ul>:nth-child(1) a:not(.user-center-tap) {
+    font-weight: normal !important;
+    color: #aaa !important;
+}
+.head3 ul>:nth-child(1) a:hover:not(.user-center-tap) {
+    color:black !important;
+}
+main>.wrap {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	line-height: 30px;
+}
+
+.CS {
+	width: 230px;
+}
+
+.CS1 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 1.39;
+	letter-spacing: -1.1px;
+	margin-bottom: 0;
+	padding: 0 0 29px;
+}
+
+.CS2 {
+	font-size: 14px;
+	text-decoration-line: none;
+	line-height: 50px;
+	border-bottom: 1px solid #333;
+	padding-bottom: 8px;
+}
+
+.CS3 {
+	font-size: 12px;
+	text-decoration-line: none;
+	line-height: 28px;
+	border-bottom: 1px solid #eee;
+	padding-top: 33px;
+	padding-bottom: 23px;
+}
+
+.CSA3 {
+	display: flex;
+}
+
+.CSB3 {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.CS4 {
+	border-bottom: 1px solid #eee;
+	padding-top: 24px;
+	padding-bottom: 12px;
+	font-size: 15px;
+
+}
+
+.CSA4 {
+	font-weight: 1000;
+}
+
+.CSB4 {
+	line-height: 1.57;
+	letter-spacing: -.3px;
+	color: #333;
+	padding-bottom: 12px;
+	text-decoration: underline;
+	margin: 15px 0px;
+}
+
+.CS5 {
+	margin-top: 24px;
+
+}
+
+.CS6 {
+	margin-top: 24px;
+
+}
+
+.SC {
+	padding-left: 54px;
+	width: 930px;
+}
+
+.SC1 {
+	margin-top: 0px;
+	font-size: 24px;
+	line-height: 34px;
+	letter-spacing: -.029em;
+	margin-bottom: 20px;
+}
+
+.SC2 {
+	padding: 35px;
+	border-radius: 10px;
+	background: #f8f8f8;
+	font-size: 13px;
+	text-align: center;
+	display: flex;
+}
+
+.SC2a {
+	display: flex;
+	margin-left: 115px;
+}
+
+.SC2b {
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+	display: table-cell;
+
+}
+.CS2>:nth-child(3)>a{
+	font-weight: bold;
+}
+
+.search {
+	width: 722px;
+	margin: 0 20px;
+	text-align: center;
+}
+
+.search {
+	position: relative;
+	width: 500px;
+}
+
+.search input {
+	width: 100%;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+	padding: 10px 12px;
+	font-size: 14px;
+}
+
+.search img {
+	position: absolute;
+	width: 17px;
+	top: 10px;
+	right: -15px;
+	margin: 0;
+}
+
+.searcha {
+	margin-top: 20px;
+	text-align: center;
+	line-height: 22px;
+	letter-spacing: -.02em;
+	display: center;
+}
+
+.searcha b {
+	margin-right: 24px;
+	font-size: 14px;
+	font-weight: 700;
+	vertical-align: top;
+	font-weight: 700;
+}
+
+.searchb {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.SC3 {
+	margin-top: 40px;
+}
+
+.SC4 {
+	padding-bottom: 40px;
+}
+
+.SC4_1 {
+	padding-bottom: 40px;
+}
+
+.board_wrap {
+  width: 1000px;
+  margin: 100px auto;
+}
+
+.board_list {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+.board_list > div {
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
+}
+.board_list > div.top {
+  border-bottom: 1px solid #999;
+}
+.board_list > div:last-child {
+  border-bottom: 1px solid #000;
+}
+.board_list > div > div {
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.board_list > div.top > div {
+  font-weight: 600;
+}
+
+.board_list .num {
+  width: 10%;
+}
+.board_list .title {
+  width: 60%;
+  text-align: left;
+}
+.board_list .top .title {
+  text-align: center;
+}
+.board_list .writer {
+  width: 10%;
+}
+.board_list .date {
+  width: 10%;
+}
+.board list .count {
+  width: 10%;
+}
+
+.board_page {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+}
+
+.board_page a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-left: 0;
+  line-height: 100%;
+}
+
+.board_page a.bt {
+  padding-top: 10px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.board_page a.num {
+  padding-top: 9px;
+  font-size: 14px;
+}
+
+.board_page a.num.on {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.board_page a:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.adminbut{
+ text-align:center;
+ margin-top: 20px;
+}
+
+.adminbutton{
+  position: relative;
+  width: 150px;
+  height: 45px;
+  font-size: 14px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: solid black;
+  border-width: 2px;	
+}

@@ -1,0 +1,176 @@
+@charset "UTF-8";
+.signup-layout{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 40px 0px 120px 0px;
+}
+.signup-menu{
+	width: 530px;
+	margin: 0 auto;
+}
+.signup-logo{
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: auto;
+}
+.signup-text1{
+	text-align: center;
+	border-bottom: 1px solid black;
+	font-size: 34px;
+	padding-top: 10px;
+	margin-top: 15px;
+	padding-bottom: 16px;
+	margin-bottom: 30px;
+}
+.signup-menu-1{
+	margin: 60px 0px 28px;
+}
+.e-form-1{
+	margin: 28px 0 12px;
+}
+.input-b{
+	display: flex;
+}
+.email{
+	width: 416px;
+	height: 41px;
+	padding-left: 14px;
+}
+#checkarea{
+	padding-top: 10px;
+	display: none;
+}
+.e-check{
+	width: 150px;
+	height: 41px;
+}
+.p-form{
+	margin-top: 22px;
+}
+.p-form-1{
+	margin: 28px 0 12px;
+}
+.password{
+	width: 510px;
+	height: 41px;
+	padding-left: 14px;
+}
+.pa-form{
+	margin-top: 22px;
+}
+.pa-form-1{
+	margin: 28px 0 12px;
+}
+.password-a{
+	width: 510px;
+	height: 41px;
+	padding-left: 14px;
+}
+.n-form{
+	margin-top: 22px;
+}
+.n-form-1{
+	margin: 28px 0 12px;
+}
+.name{
+	width: 510px;
+	height: 41px;
+	padding-left: 14px;
+}
+.phone-form{
+	margin-top: 22px;
+}
+.phone-form-1{
+	margin: 28px 0 12px;
+}
+.phone{
+	width: 510px;
+	height: 41px;
+	padding-left: 14px;
+}
+input{
+	border-radius: 8px;
+	border:1px solid #868e96;
+}
+button[type="button"]{
+	background-color: #564c42;
+	color: white;
+	border-radius: 8px;
+	margin-left: 6px;
+	width: 100px;
+	height: 45px;
+}
+.signup-menu-2{
+	padding-top: 30px;
+}
+.check{
+	font-size: 25px;
+	border-bottom: 1px solid black;
+	padding-bottom: 16px;
+	margin-bottom: 30px;
+}
+.check-1{
+	    padding: 26px 28px 14px 0px;
+	    font-size: 17px;
+}
+label{
+	bottom: 5px;
+}
+.agree1{
+	border-radius: 15px;
+	background-color: #f8f8f8;
+	padding: 22px 24px 0px 24px;
+	margin-bottom: 10px;
+}
+.signup-menu-2 input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+}
+.agree1btn{
+	float: right;
+	width: 20px;
+	height: 20px;
+}
+.checkboxmenu1{
+	padding: 0 0 18px 0px;
+	border-bottom: 1px solid #eee;
+}
+.step-box div{
+	margin-bottom: 8px;
+}
+.step-box a{
+	float: right;
+	padding-top: 5px;
+}
+.step-box label{
+	font-size: 12px;
+}
+.step-box{
+	padding: 16px 0 6px 0;
+}
+.last{
+	font-size: 10.5px;
+	color: #999;
+}
+.signup-b{
+	padding-top: 10px;
+}
+.signup-b input[type="submit"]{
+	width: 530px;
+	height: 50px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	background-color: red;
+	font-size: 17px;
+	color: white;
+}
+.signup-b button:hover{
+	background-color: indianred;
+}
+input:focus{
+/*	border-color: pink;*/
+	border: 1.9px solid pink;
+	outline: none;
+}

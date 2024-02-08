@@ -1,0 +1,227 @@
+.swiper {
+  width: 1200px;
+  height: 700px;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper .main-slide{
+	height:80%;
+}
+.swiper .main-text{
+	height:20%;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	width:600px;
+	margin:0 auto;
+}
+.swiper .main-text p{
+	padding-left: 40px;
+}
+.swiper .main-text :nth-child(1){
+	font-size: 1.6rem;
+	font-weight: bold;
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+.swiper .swiper-button-next{
+	top:90%;
+	right:90px;
+}
+.swiper .swiper-button-prev{
+	top:90%;
+	right:160px;
+	left:auto;
+}
+:root {
+    --swiper-theme-color: black;
+}
+.main-icon{
+	margin:40px auto;
+}
+.main-icon span{
+	width:60px;
+}
+.main-icon .main-icon-box{
+	width:100px;
+	cursor: pointer;
+	text-align: center;
+}
+.main-icon .main-icon-box .img-box{
+	width:100%;
+	height:100px;
+	position: relative;
+	background-color: #eee;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+.main-icon .main-icon-box .icon-img{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:80px;
+	height:80px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.main-icon .main-icon-box .necklace{
+	background-image: url(/img/index/necklace.png);
+}
+.main-icon .main-icon-box .earring{
+	background-image: url(/img/index/earring.png);
+}
+.main-icon .main-icon-box .bracelet{
+	background-image: url(/img/index/bracelet.png);
+}
+.main-icon .main-icon-box .ring{
+	background-image: url(/img/index/ring.png);
+}
+.section{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.title{
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+.product{
+	flex-wrap: wrap;
+}
+.product .product-box{
+	width:280px;
+}
+.product .product-box .product-img{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:100%;
+	height:300px;
+}
+.product .product-box .p-bracelet{
+	background-image: url(/img/index/p-bracelet.jpg);
+}
+.product .product-box .p-earring{
+	background-image: url(/img/index/p-earring.jpg);
+}
+.product .product-box .p-ring{
+	background-image: url(/img/index/p-ring.jpg);
+}
+.product .product-box .p-necklace{
+	background-image: url(/img/index/p-necklace.jpg);
+}
+.product .product-box .product-title{
+	padding-top: 20px;
+}
+.reflect{
+	transform: scaleX(-1);
+}
+.product .product-box .product-title :nth-child(1){
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.product .product-box .product-img .product-hover{
+	width:100%;
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+	position: relative;
+}
+.product .product-box .product-img:hover .product-hover{
+	opacity: 1;
+	visibility: visible;
+}
+.product .product-box .product-img .product-hover p,
+.product .product-box .product-img .product-hover div{
+	position: absolute;
+}
+.product .product-box .product-img .product-hover .hover-name{
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.product .product-box .product-img .product-hover .hover-btn{
+	width:120px;
+	height:50px;
+	border: 1px solid white;
+	cursor: pointer;
+	right:20px;
+	bottom:20px;
+	align-items: center;
+}
+.product .product-box .product-img .product-hover .hover-btn a{
+	width:100%;
+	text-align: center;
+	color:white;
+}
+.banner{
+	width:100%;
+	height:600px;
+	margin:40px 0;
+	position: relative;
+}
+.banner .banner-img{
+	width:100%;
+	height:100%;
+	background-image: url(/img/index/ad.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.banner .banner-title{
+	font-size: 2rem;
+	font-weight: bold;
+	position: absolute;
+	top:50%;
+	color:white;
+	transform: translate(0, -50%);
+}
+.banner .korea{
+	left:40px;
+}
+.banner .english{
+	right:40px;
+}
+.event-box-all{
+	width:100%;
+	height:500px;
+}
+.event-box-all .event-box{
+	width:31%;
+	height:450px;
+}
+.event-box-all .event-box .event-img{
+	width:100%;
+	height:100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+.event-box-all .event-box .wedding{
+	background-image: url(/img/index/wedding.jpg);
+}
+.event-box-all .event-box .visit{
+	background-image: url(/img/index/visit.jpg);
+}
+.event-box-all .event-box .graduate{
+	background-image: url(/img/index/graduate.jpg);
+}
+.event-box-all .event-box .event-title{
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+}

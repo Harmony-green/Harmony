@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.list :nth-child(1){
+	width:10%;
+}
+.list> :nth-child(2){
+	width:15%;
+}
+.list{
+	align-items: center;
+}.list-inner button{
+	width:100px;
+	height:40px;
+	margin-left: 40px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+	<head>
+	    <th:block th:replace="~{common/mypage-layout::head}" />
+	    <link rel="stylesheet" href="/css/mypage/mypage-order.css">
+	</head>
+	<body>
+	    <main>
+	        <section class="view-size mypage-main flex between">
+				<th:block th:replace="~{common/mypage-layout::mypage-layout-left}" />
+				<section class="mypage-rigth">
+					<th:block  th:replace="~{common/mypage-layout::mypage-layout-right}" />
+					<h1>주문내역조회</h1>
+			        <div class="order-title flex">
+						<p>주문 내역</p>
+						<p>한번에 <span>최대 3개월까지</span> 조회가 가능합니다</p>
+					</div>
+					<div class="order-search">
+						<div class="search-area flex">
+							<div class="search-choose">
+								<button>최근1개월</button>
+								<button>최근3개월</button>
+								<button>직접선택</button>
+							</div>
+							<div class="search-select flex">
+								<select>
+									<option value="202312">23년12월</option>
+									<option value="202311">23년11월</option>
+									<option value="202310">23년10월</option>
+									<option value="202309">23년09월</option>
+									<option value="202308">23년08월</option>
+									<option value="202307">23년07월</option>
+									<option value="202306">23년06월</option>
+									<option value="202305">23년05월</option>
+									<option value="202304">23년04월</option>
+									<option value="202303">23년03월</option>
+									<option value="202302">23년02월</option>
+									<option value="202301">23년01월</option>
+								</select>
+								<p> ~ </p>
+								<select>
+									<option value="202312">23년12월</option>
+									<option value="202311">23년11월</option>
+									<option value="202310">23년10월</option>
+									<option value="202309">23년09월</option>
+									<option value="202308">23년08월</option>
+									<option value="202307">23년07월</option>
+									<option value="202306">23년06월</option>
+									<option value="202305">23년05월</option>
+									<option value="202304">23년04월</option>
+									<option value="202303">23년03월</option>
+									<option value="202302">23년02월</option>
+									<option value="202301">23년01월</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+	    </main>
+	</body>
+</html>

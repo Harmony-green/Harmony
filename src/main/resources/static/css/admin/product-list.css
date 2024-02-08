@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.list> :nth-child(1){
+	width:10%;
+}
+.list> :nth-child(2){
+	width:15%;
+}
+.list> :nth-child(3){
+	width:15%;
+}
+.list> :nth-child(4){
+	width:10%;
+}
+.list> :nth-child(5){
+	width:25%;
+}
+.list> :nth-child(6){
+	width:25%;
+}
+.list-all{
+	overflow-y: scroll;
+	height:700px;
+}
+.list-all table{
+	width:100%;
+}
+.list-all table tr{
+	align-items: center;
+}
+.defalut{display : block;}
+.edit{display:none;}
+.list-inner td{
+	text-align: center;
+}
+.list-inner td input{
+	width:80%;
+	margin:0 auto;
+	text-align: center;
+}
+.btn-cancel, .btn-edit-done{
+	width:70px;
+}
+.span-margin{
+	margin:0 5px;
+}
+.category{
+	margin:0 auto;
+	width:200px;
+	text-align: center;
+}

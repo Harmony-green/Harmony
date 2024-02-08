@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+	<head>
+	    <th:block th:replace="~{common/mypage-layout::head}" />
+	    <link rel="stylesheet" href="/css/mypage/mypage-profile.css">
+	    <script type="text/javascript" src="/js/mypage/mypage-profile.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <main>
+	        <section class="view-size mypage-main flex between">
+				<th:block th:replace="~{common/mypage-layout::mypage-layout-left}" />
+				<section class="mypage-rigth">
+					<th:block  th:replace="~{common/mypage-layout::mypage-layout-right}" />
+					<h1>프로필 관리</h1>
+					<div class="flex">
+						<div class="profile-wrap">프로필 관리</div>
+					</div>
+					<div class="profilep flex">
+						<form action="/profileImg" method="post" >
+							<label class="btn-file">
+	<!--							<img src="/img/mypage/smile.svg">-->
+								<input type="file" name="profileImg" accept="image/*" onchange="handleProfileImgChange(this)">
+								<input type="hidden" class="tempKey" name="tempKey">
+								<input type="hidden" class="orgName" name="orgName">
+								<div class="namep">
+									<div sec:authentication="principal.name"></div>
+									<button type="submit">사진등록</button>
+								</div>
+							</label>
+						</form>
+					</div>
+					<div class="profileinfo">
+						<p class="bold">기본정보</p>
+						<div class="flex leftpadding userinfo">
+							<p>이메일</p>
+							<p class="pPadding3">:</p>
+							<span class="spanpadding" sec:authentication="name"></span>
+						</div>
+						<div class="flex leftpadding ">
+							<p>이름</p>
+							<p class="pPadding2">:</p>
+							<span class="spanpadding" sec:authentication="principal.name">이름</span>
+						</div>
+						<div class="flex leftpadding">
+							<p>전화번호</p>
+							<p class="pPadding1">:</p>
+							<span class="spanpadding" sec:authentication="principal.phone">전화번호</span>
+						</div>
+						<div class="sexual flex leftpadding">
+						    <p>성별</p>
+						    <span class="flex span2">
+						        <label for="male" id="maleLabel">
+						            <input type="radio" name="sexual" value="male" id="male">남성
+						        </label>
+						        <label class="female" for="female" id="femaleLabel">
+						            <input type="radio" name="sexual" value="female" id="female">여성
+						        </label>
+						    </span>
+						</div>
+<!--						<div>-->
+<!--							<input type="text" th:value="${#authentication.principal.name}">-->
+<!--							<input type="text" th:value="${#authentication.principal.phone}">-->
+<!--						</div>-->
+						<div class="passc">
+							<form id="changePasswordForm" method="post" action="/users/change-password">
+								<p class="bold">비밀번호 변경</p>
+								<div class="passarea leftpadding">
+									<div>
+								        <label for="currentpass">현재 패스워드</label>
+								        <input type="password" id="currentpass" name="currentpass" placeholder="현재 패스워드를 입력" required>
+								    </div>
+								    <div>
+								        <label for="newpass">새 패스워드</label>
+								        <input type="password" id="newpass" name="newpass" placeholder="변경하실 패스워드를 입력" required>
+								    </div>
+								    <div>
+								        <label for="newpassagain">새 패스워드 확인</label>
+								        <input type="password" id="newpassagain" name="newpassagain" placeholder="패스워드를 재입력" required>
+								    </div>
+								    <div class="passb">
+								        <button type="button" onclick="passchange()">패스워드 변경하기</button>
+								    </div>
+								</div>
+							</form>
+						</div>
+						<div class="delete">
+							<p class="bold">회원 탈퇴</p>
+							<div class="flex leftpadding">
+								<button onclick="deletepage()">회원탈퇴하기</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+	    </main>
+	</body>
+</html>

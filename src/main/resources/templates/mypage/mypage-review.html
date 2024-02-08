@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+	<head>
+	    <th:block th:replace="~{common/mypage-layout::head}" />
+	    <link rel="stylesheet" href="/css/mypage/mypage-review.css">
+	</head>
+	<body>
+	    <main>
+	        <section class="view-size mypage-main flex between">
+				<th:block th:replace="~{common/mypage-layout::mypage-layout-left}" />
+				<section class="mypage-rigth">
+					<th:block  th:replace="~{common/mypage-layout::mypage-layout-right}" />
+					<p>review</p>
+				</section>
+			</section>
+	    </main>
+	</body>
+</html>

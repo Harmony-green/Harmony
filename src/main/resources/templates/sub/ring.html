@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>반지</title>
+    <link rel="stylesheet" href="/css/sub/sub.css">
+    <style>
+		.head3 ul>:nth-child(6) a:not(.user-center-tap) {
+		    font-weight: bold;
+		    color: black;
+		}
+	</style>
+</head>
+<body>
+    <main>
+        <h1>반지페이지</h1>
+    <section class="title ring">
+		<div class="title-box">
+			<p class="title-text">R I N G</p>
+		</div>
+	</section>
+	<p class="product-title">PRODUCT</p>
+    <section class="product view-size flex between">
+		<div th:each="m :${list}" th:if="${m.category} == 반지" class="product-box">
+			<div class="img-box">
+				<img th:src="${m.mainImgUrl}">
+			</div>
+			<div class="flex center">
+				<a class="img-text">이름 : </a>
+				<a th:text="${m.title}" class="img-text">이름 : 상품1</a>
+			</div>
+			<div class="flex center">
+				<a class="img-text">가격 : </a>
+				<a th:text="${m.price}" class="img-text">가격 : 1000원</a>
+			</div>
+			<div class="hover-effect">
+				<a th:href="@{/product-info/{pk}(pk=${m.no})}" class="move-info">자세히보기</a>
+			</div>
+		</div>
+	</section>
+    </main>
+</body>
+</html>

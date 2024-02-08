@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+
+<head>
+    <title>안녕</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="/css/common/reset-css.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js"></script>
+</head>
+<main>
+	<h1>메인슬라이드</h1>
+    <section class="swiper mySwiper view-size">
+	    <div class="swiper-wrapper">
+		    <div th:each="m :${list}" class="swiper-slide">
+				<div class="main-slide">
+					<img th:src="${m.url}+${m.tempKey}">
+				</div>
+				<div class="main-text">
+					<p th:text="${m.title}">이벤트 타이틀</p>
+					<p th:text="${m.sub}">DB에 저장된것을 불러와서 tymeleaf 반복문돌릴 예정</p>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-button-next"></div>
+	    <div class="swiper-button-prev"></div>
+	</section>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+		  slidesPerView: 1,
+		  spaceBetween: 30,
+		  loop: true,
+		  navigation: {
+		    nextEl: ".swiper-button-next",
+		    prevEl: ".swiper-button-prev",
+		  },
+		});
+	</script>
+	<h1>아이콘</h1>
+	<section class="main-icon view-size flex center section">
+		  <a href="/sub/necklace" class="main-icon-box">
+			  <div class="img-box">
+				  <div class="necklace icon-img"></div>
+			  </div>
+			  <p>목걸이</p>
+		  </a>
+		  <span></span>
+		  <a href="/sub/earring" class="main-icon-box">
+			  <div class="img-box">
+				  <div class="earring icon-img"></div>
+			  </div>
+			  <p>귀걸이</p>
+		  </a>
+		  <span></span>
+		  <a href="/sub/bracelet" class="main-icon-box">
+			  <div class="img-box">
+				  <div class="bracelet icon-img"></div>
+			  </div>
+			  <p>팔찌</p>
+		  </a>
+		  <span></span>
+		  <a href="/sub/ring" class="main-icon-box">
+			  <div class="img-box">
+				  <div class="ring icon-img"></div>
+			  </div>
+			  <p>반지</p>
+		  </a>
+	</section>
+	<h1>상품</h1>
+	<section class="view-size section">
+		  <p class="title">PRODUCT</p>
+		  <section class="product flex between">
+			  <div class="product-box" data-aos="fade-up">
+				  <div class="product-img p-earring">
+					  <div class="product-hover">
+						  <p class="hover-name">Earring</p>
+						  <div class="hover-btn flex"><a href="/sub/earring">VIEW</a></div>
+					  </div>
+				  </div>
+				  <div class="product-title">
+					  <p>귀걸이</p>
+					  <p>귀걸이소개</p>
+				  </div>
+			  </div>
+			  <div class="product-box" data-aos="fade-down">
+				  <div class="product-img p-necklace">
+					  <div class="product-hover">
+						  <p class="hover-name">Necklace</p>
+						  <div class="hover-btn flex"><a href="/sub/necklace">VIEW</a></div>
+					  </div>
+				  </div>
+				  <div class="product-title">
+					  <p>목걸이</p>
+					  <p>목걸이소개</p>
+				  </div>
+			  </div>
+			  <div class="product-box" data-aos="fade-up">
+				  <div class="product-img p-bracelet reflect">
+					  <div class="product-hover reflect">
+						  <p class="hover-name">Bracelet</p>
+						  <div class="hover-btn flex"><a href="/sub/bracelet">VIEW</a></div>
+					  </div>
+				  </div>
+				  <div class="product-title">
+					  <p>팔찌</p>
+					  <p>팔찌소개</p>
+				  </div>
+			  </div>
+			  <div class="product-box" data-aos="fade-down">
+				  <div class="product-img p-ring reflect">
+					  <div class="product-hover reflect">
+						  <p class="hover-name">Ring</p>
+						  <div class="hover-btn flex"><a href="/sub/ring">VIEW</a></div>
+					  </div>
+				  </div>
+				  <div class="product-title">
+					  <p>반지</p>
+					  <p>반지소개</p>
+				  </div>
+			  </div>
+		  </section>
+	</section>
+	<script>
+		AOS.init();
+	</script>
+	<h1>배너</h1>
+	<section class="banner section">
+		<div class="banner-img"></div>
+		<p class="banner-title korea">당신의 아름다움을 위하여</p>
+		<p class="banner-title english">For Your Beauty</p>
+	</section>
+	<h1>이벤트</h1>
+	<section class="event view-size section">
+		<p class="title">EVENT</p>
+		<div class="event-box-all flex between">
+			<div class="event-box">
+				<div class="event-img wedding"></div>
+				<p class="event-title">웨딩 할인</p>
+			</div>
+			<div class="event-box">
+				<div class="event-img graduate"></div>
+				<p class="event-title">졸업생 할인</p>
+			</div>
+			<div class="event-box">
+				<div class="event-img visit"></div>
+				<p class="event-title">방문 할인</p>
+			</div>
+		</div>
+	</section>
+</main>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="/css/sub/payment.css">
+		<script src="/js/sub/payment.js"></script>
+		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+	<body>
+		<div class="h-logo">
+			<a href="/"><img src="/img/common/harmony-logo.png"></a>
+		</div>
+		<div>
+			<p>구매하실 상품 : <span th:text="${dto.title}" id="productName"></span></p>
+			<p>구매하실 상품 가격 : <span th:text="${dto.price}" id="productPrice"></span></p>
+			<p>구매자 이름 : <span id="username" class="spanpadding" sec:authentication="principal.name"></span></p>
+			<p>구매자 전화번호 : <span id="userphone" class="spanpadding" sec:authentication="principal.phone"></span></p>
+			<p id="useremail" sec:authentication="name" hidden></p>
+			<p>배송지 주소 : </p>
+			<input type="text" id="buyerPostcode" placeholder="우편번호" readonly>
+			<input type="button" onclick="findAddress()" value="우편번호 찾기"><br>
+			<input type="text" id="buyerRoadAddress" placeholder="도로명주소" readonly>
+			<input type="text" id="buyerJibunAddress" placeholder="지번주소" readonly>
+			<span id="guide" style="color:#999;display:none"></span>
+			<input type="text" id="buyerDetailAddress" placeholder="상세주소">
+		</div>
+		<br>
+		<input type="button" value="결제하기" onclick="requestPay()">
+	</body>
+</html>

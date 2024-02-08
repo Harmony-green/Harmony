@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>반지</title>
+    <link rel="stylesheet" href="/css/sub/sub.css">
+    <link rel="stylesheet" href="/css/sub/product-info.css">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+    <main>
+		<h1>상품상세페이지</h1>
+		<section class="view-size product-info-page">
+			<div class="flex between">
+				<div class="img-wrap">
+					<div class="main-img"></div>
+					<div class="small-img">
+					<th:block th:each="img: ${dto.imgs}">
+						<img th:class="${img.check eq true} ? 'target' : ''"  th:src="${img.url}" width="100">
+					</th:block>
+					</div>
+				</div>
+				<script >
+					function mainImg(){
+						var imgsrc=$(".img-wrap .target").attr("src");
+						$(".img-wrap .main-img").css("background-image", `url(${imgsrc})`)
+					}
+					
+					mainImg();
+					$(".img-wrap img").click(function(){
+						$(".img-wrap img").removeClass("target");
+						$(this).addClass("target");
+						mainImg();
+					})
+					
+				</script>
+				
+				<div class="product-info">
+					<p><span th:text="${dto.category}"></span></p>
+					<p class="top"><span th:text="${dto.title}"></span></p>
+					<p class="top"><span th:text="${dto.price}"></span>원</p>
+					<div class="product-btn flex between">
+						<button><a href="#" class="flex center"><p>장바구니담기</p></a></button>
+						<button class="black-btn"><a th:href="@{/payment/{pk}(pk=${dto.no})}" class="flex center"><p>구매하기</p></a></button>
+					</div>
+				</div>
+			</div>
+			<div class="product-info-text">
+				<p>상세정보</p>
+				<p>DB에서 가져온 상품 상세정보</p>
+				<p>↓</p>
+				<p th:text="${dto.content}"></p>
+			</div>
+		</section>
+    </main>
+</body>
+</html>

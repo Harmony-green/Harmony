@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.btn-file{
+	display: inline-flex;
+	width:100px;
+	height:100px;
+	border: 1px dashed black;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	background-color: #eee;
+	/*background-image: url();*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+input[type=file]{
+	display: none;
+}
+.pro-add{
+	padding:20px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-top: 20px;
+}
+.pro-add> div{
+	margin-bottom: 20px;
+}
+.pro-add> div p{
+	width:100px;
+}
+.pro-add> div div{
+	display: flex;
+	align-items: center;
+	border: 1px solid black;
+	margin-right: 20px;
+	padding-left: 10px;
+}
+.file-wrap2 .btn-file{
+	width:50px;
+	height:50px;
+	margin-right: 10px;
+}
+
+.no{
+	align-items: center;
+}
+textarea{
+	width:500px;
+	height:100px;
+}
+.pro-add div:not(.no){
+	height:50px
+}
+.pro-add> .no> div{
+	height:102px;
+}
+.category{
+	width:250px;
+	height:50px;
+}

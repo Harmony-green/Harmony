@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+.chat-bot-icon button{
+	background-image: url(/img/common/aside/robot.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	width:100%;
+	height:100%;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.chat-bot-icon img{
+	width:64px;
+	height:64px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.chat-bot{
+	width:350px;
+	height:500px;
+	position: fixed;
+	right:120px;
+	bottom:100px;
+	display: none;
+	z-index: 999;
+}
+.chat-bot .chat-bot-top{
+	height:30px;
+	padding: 10px;
+	background-color: #ccc;
+	border-radius: 25px 25px 0 0;
+	align-items: center;
+}
+.chat-bot .chat-bot-top .top-left,
+.chat-bot .chat-bot-top .top-right{
+	width:30%;
+}
+.chat-bot .chat-bot-top .top-mid{
+	width:70%;
+	text-align: center;
+}
+.chat-bot .chat-bot-top .top-left div{
+	align-items: center;
+}
+.chat-bot .chat-bot-top .top-left div img{
+	height:24px;
+}
+.chat-bot .chat-bot-top .top-left div p{
+	margin:0;
+}
+.chat-bot .chat-bot-top .top-right form{
+	justify-content: end;
+}
+.chat-bot .chat-bot-top .top-right form button{
+	cursor: pointer;
+	background-image: url(/img/common/aside/close-x-box.svg);
+	width:24px;
+	height:24px;
+	background-position: center;
+	background-size: cover;
+}
+.chat-bot .chat-bot-mid{
+	background-color: #eee;
+	height:380px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+.chat-bot .chat-bot-mid .content{
+	width:auto;
+	
+}
+.chat-bot .chat-bot-mid .content>div>div{
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+.chat-bot .chat-bot-mid .answer div{
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+.chat-bot .chat-bot-mid .question{
+	justify-content: end;
+	text-align: end;
+}
+.chat-bot .chat-bot-mid .question .user-question{
+	background-color: white;
+}
+.chat-bot .chat-bot-bottom {
+    height: 30px;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 0 0 25px 25px;
+}
+.chat-bot .chat-bot-bottom .home{
+	width:30px;
+	margin-right: 10px;
+}
+.chat-bot .chat-bot-bottom .textarea{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.chat-bot .chat-bot-bottom .textarea input{
+	width:270px;
+	height:25px;
+	border-radius: 15px;
+	padding-left: 10px;
+}
+.chat-bot .chat-bot-bottom .textarea .send{
+	position: absolute;
+	right:15px;
+	top:3px;
+	width:25px;
+	height:25px;
+	background-image: url(/img/common/aside/up.svg);
+	border: none;
+	background-color: white;
+	cursor: pointer;
+}

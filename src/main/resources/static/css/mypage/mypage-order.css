@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.order-title{
+	align-items: center;
+}
+.order-title>:nth-child(1){
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.order-title>:nth-child(2){
+	color:#aaa;
+}
+.order-title>:nth-child(2) span{
+	font-weight: bold;
+	color:#aaa;
+}
+.mypage-main .mypage-left> :nth-child(2){
+	font-weight: bold;
+}

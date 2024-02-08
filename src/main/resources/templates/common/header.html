@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<header>
+		<h1>헤더영역</h1>
+		<section>
+			<section class="view-size-pc head1 flex between">
+				<div onclick="openPop()" class="pc-none menu-trigger">
+					<span id="line1"></span>
+					<span id="line2"></span>
+					<span id="line3"></span>
+				</div>
+				<ul id="userList" class="flex-pc between-pc">
+					<div class="flex-pc user-tab between-pc">
+						<div class="flex-pc user-tab">
+							<div class="flex-pc before-log"><!--로그인전-->
+								<th:block sec:authorize="isAnonymous">
+									<li><a href="/users/login">로그인</a></li>
+									<li><a href="/users/signupagree">회원가입</a></li>
+							<!--th:if="${#authorization.expr('hasRole(''ADMIN'')')}"-->
+								</th:block>
+							</div>
+							<div class="flex-pc after-log" sec:authorize="isAuthenticated()"><!--로그인후-->
+								<th:block sec:authorize="isAuthenticated()">
+									<li>
+										<a href="/myharmony" sec:authentication="principal.name">회원이름</a> 님 어서오세요 !
+									</li>
+									<li><a href="/logout">로그아웃</a></li>
+									<div th:if="${#authentication.principal.admin}">
+										<li><a href="/admin">관리자페이지</a></li> 
+    								</div>
+								</th:block>
+							</div>
+						</div>
+						<div class="flex-pc other-tab">
+							<li><a href="/myharmony">마이하모니</a></li>
+							<li class="not"><a href="/cs">고객센터</a></li>
+						</div>
+					</div>
+				</ul>
+				<a href="/" class="logo">
+						<img src="/img/common/harmony-logo.png">
+				</a>
+			</section>
+			<section class="view-size-pc head2">
+				<form th:action="@{/result}" method="get">
+					<label for="inputValue"></label>
+					<input type="text" id="inputValue" name="inputValue" placeholder="검색어를 입력하세요">
+					<button type="submit"></button>
+				</form>
+			</section>
+			<section id="list" class="view-size-pc head3">
+				<ul class="flex-pc">
+					<li><a href="/">홈</a></li>
+					<li><a href="/sub/best">베스트</a></li>
+					<li><a href="/sub/necklace">목걸이</a></li>
+					<li><a href="/sub/earring">귀걸이</a></li>
+					<li><a href="/sub/bracelet">팔찌</a></li>
+					<li><a href="/sub/ring">반지</a></li>
+					<li class="not user-center">
+						<a href="/cs" onclick="openUserTap()">고객센터</a>
+						<div id="userTap" class="user-tap">
+							<p><a class="user-center-tap" href="/faq">FAQ </a></p>
+							<p><a class="user-center-tap" href="/info">공지사항 </a></p>
+							<p><a class="user-center-tap" href="/qna">1:1문의하기 </a></p>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</header>
+</html>

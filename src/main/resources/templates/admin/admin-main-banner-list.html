@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:replace="~{common/admin-layout::head}" />
+		<link rel="stylesheet" href="/css/admin/common-list.css">
+		<link rel="stylesheet" href="/css/admin/main-banner-list.css">
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<main class="flex">
+			<h1>메인배너 리스트</h1>
+			<th:block th:replace="~{common/admin-layout::admin-layout}" />
+			<section class="admin-right list-right">
+				<p class="admin-title">메인배너 리스트</p>
+				<div class="list-all">
+					<div class="flex list list-name">
+						<p>번호</p>
+						<p>제목</p>
+					</div>
+					<div th:each="m :${list}" class="flex list list-inner">
+						<p th:text="${m.no}">번호</p>
+						<p th:text="${m.title}">제목</p>
+						<p>
+							<form class="default" th:action="|/mainBannerList/${m.no}|" method="POST">
+								<input type="hidden" name="_method" value="delete" />
+								<button>삭제</button>	
+							</form>
+							<input type="hidden" class="no" th:value="${m.no}" />
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

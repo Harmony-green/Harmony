@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="commonLayout(head, main)">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/mypage/mypage-layout.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="/css/mypage/mypage-layout.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	</head>
+	<body>
+		<section  >
+			<section th:fragment="mypage-layout-left">
+				<h1>마이페이지 왼쪽사이드바</h1>
+				<div class="mypage-left">
+					<a>마이하모니</a>
+					<p><a href="/order">주문내역</a></p>
+					<p><a href="/ask">나의 문의 내역</a></p>
+					<div class="mypage-left-user">
+						<p>하모니 고객센터</p>
+						<p class="mypage-number">0000-0000<span>(유료)</span></p>
+						<p>월~금요일 09:00 ~ 18:00</p>
+						<p>주말, 공휴일 휴무</p>
+					</div>
+					<div class="mypage-left-button">
+						<button><a href="/cs">고객센터</a></button>
+						<button><a href="/qna">1:1문의하기</a></button>
+					</div>
+				</div>
+			</section>
+			<section  th:fragment="mypage-layout-right">
+				<h1>마이페이지 메인내용</h1>
+				<div >
+					<h1>회원정보</h1>
+					<div class="mypage-user">
+						<div class="mypage-user-info flex between">
+							<div class="flex info-left">
+								<div class="smile-img">
+									<img src="/img/mypage/smile.svg">
+									<a href="/profile"><p>프로필<br>수정</p></a>
+								</div>
+								<div class="info-text flex between">
+									<p>쇼핑하기 좋은날이에요!</p>
+									<p class="big"><span class="bold" sec:authentication="principal.name"></span>님 ></p>
+									<div class="flex">
+										<p><span class="bold">하모니 BRONZE</span> 등급이네요!</p>
+										<div class="level">
+											<p onclick="openLevel()">?</p>
+										</div>
+									</div>
+									<div class="level-list" id="level-list">
+										<div class="flex between">
+											<p>하모니등급</p>
+											<div onclick="closeLevel()" class="level-list-close"></div>
+										</div>
+										<div class="level-list-color">
+											<p>BRONZE</p>
+											<p>SILVER</p>
+											<p>GOLD</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<span class="info-line"></span>
+							<div class="info-right">
+								<div class="flex center">
+									<a href="#">
+										<p>H.POINT</p>
+										<p><span>0</span>P</p>
+									</a>
+									<span></span>
+									<a href="#">
+										<p>나의쿠폰</p>
+										<p><span>0</span>개</p>
+									</a>
+									<span></span>
+									<a href="#">
+										<p>모바일상품권</p>
+										<p><span>0</span>원</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mypage-user-ad">
+						<div class="flex center">
+							<p>알림</p>
+							<div class="swiper mySwiper">
+							    <div class="swiper-wrapper">
+							      <a href="#" class="swiper-slide">수신 동의하고 하모니마일리지 받기</a>
+							      <a href="#" class="swiper-slide">사진 리뷰 작성 시 H.stamp 적립</a>
+							      <a href="#" class="swiper-slide">참여 시 H.POINT 최대 5만점 적립</a>
+							      <a href="#" class="swiper-slide">수신 동의하고 온마일리지 받기</a>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<script>
+						var swiper = new Swiper(".mySwiper", {
+					      direction: "vertical",
+					      slidesPerView: 1,
+					      spaceBetween: 30,
+					      mousewheel: true,
+					      loop: true,
+					      autoplay: {
+					        delay: 2500,
+					        disableOnInteraction: false,
+					      },
+					      pagination: {
+					        el: ".swiper-pagination",
+					        clickable: true,
+					      },
+					    });
+				 	</script>
+			</div>
+			</section>
+		</section>
+	</body>
+</html>

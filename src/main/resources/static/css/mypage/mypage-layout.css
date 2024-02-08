@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+.mypage-main{
+	margin-bottom: 40px;
+}
+.mypage-main .mypage-left{
+	width:220px;
+}
+.mypage-main .mypage-left>:nth-child(1){
+	font-size: 2rem;
+	font-weight: bold;
+}
+.mypage-main .mypage-left> p{
+	padding:30px 0;
+	border-bottom: 1px solid #eee;
+}
+.mypage-main .mypage-left-user{
+	padding:40px 0;
+}
+.mypage-main .mypage-left-user>:nth-child(1),
+.mypage-main .mypage-left-user>:nth-child(2){
+	font-weight: bold;
+}
+.mypage-main .mypage-left-user .mypage-number{
+	font-size: 2rem;
+	padding: 10px 0;
+}
+.mypage-main .mypage-left-user .mypage-number span{
+	font-size: 14px;
+}
+.mypage-main .mypage-left-user>:nth-child(3),
+.mypage-main .mypage-left-user>:nth-child(4){
+	font-size: 14px;
+	color: gray;
+}
+.mypage-main .mypage-left-button button{
+	display: block;
+	width:100%;
+	margin-top: 10px;
+	height:50px;
+	background-color: white;
+}
+.mypage-main .mypage-left-button button a{
+	display: block;
+	width:100%;
+	height:100%;
+	padding-top: 10px;
+}
+.mypage-rigth{
+	width:980px;
+	padding:0 0 0 120px;
+}
+.mypage-user{
+	padding: 30px;
+	background-color: #eee;
+	border-radius: 15px 15px 0 0;
+}
+.mypage-user-info>div{
+	align-items: center;
+	height:100px;
+}
+.mypage-user-info .info-text{
+	position: relative;
+	flex-direction: column;
+	height:100%;
+}
+.big{
+	font-size: 1.5rem;
+}
+.bold{
+	font-weight: bold;
+}
+.mypage-user-info .info-text .level{
+	margin-left: 10px;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 50%;
+	width:18px;
+	height:18px;
+	text-align: center;
+	cursor: pointer;
+}
+.mypage-rigth .smile-img{
+	position: relative;
+	width:80px;
+	height:80px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.mypage-rigth .smile-img a,
+.mypage-rigth .smile-img img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.mypage-rigth .smile-img img{
+	width:120%;
+	height:120%;
+}
+.mypage-rigth .smile-img a{
+	display: block;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+	text-align: center;
+}
+.mypage-rigth .smile-img a p{
+	color: white;
+	font-weight: bold;
+	padding-top: 25px;
+}
+.mypage-rigth .smile-img:hover a{
+	opacity: 1;
+	visibility: visible;
+}
+.mypage-rigth .level-list{
+	position: absolute;
+	top:90px;
+	left:50px;
+	border: 1px solid black;
+	border-radius: 25px;
+	background-color: white;
+	width:130px;
+	padding: 15px 25px;
+	line-height: 40px;
+	font-weight: bold;
+	display: none;
+}
+.mypage-rigth .level-list .flex{
+	align-items: center;
+}
+.mypage-rigth .level-list .level-list-close{
+	background-image: url(/img/common/aside/close-x-box.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+}
+.mypage-rigth .level-list .level-list-color :nth-child(1){
+	color:saddlebrown;
+}
+.mypage-rigth .level-list .level-list-color :nth-child(2){
+	color:silver;
+}
+.mypage-rigth .level-list .level-list-color :nth-child(3){
+	color:gold;
+}
+.mypage-rigth .mypage-user-info .info-line{
+	width:1px;
+	height:100px;
+	display: block;
+	background-color: #aaa;
+}
+.mypage-rigth .mypage-user-info .info-left,
+.mypage-rigth .mypage-user-info .info-right{
+	width:49%;
+}
+.mypage-rigth .mypage-user-info .info-right .flex{
+	align-items: center;
+	height:100%;
+	text-align: center;
+	line-height: 30px;
+}
+.mypage-rigth .mypage-user-info .info-right .flex> span{
+	width:1px;
+	height:50px;
+	background-color: #aaa;
+	display: block;
+	margin:0 30px;
+}
+.mypage-rigth .mypage-user-info .info-right .flex a span{
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.mypage-rigth .mypage-user-ad{
+	width:100%;
+	height:50px;
+	background-color: #EC6B62;
+	border-radius: 0 0 15px 15px;
+	margin-bottom: 50px;
+}
+.swiper {
+	width:60%;
+  height: 50px;
+}
+
+
+.swiper-slide {
+  text-align: left;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color:white;
+}
+.mypage-rigth .mypage-user-ad .flex{
+	align-items: center;
+}
+.mypage-rigth .mypage-user-ad .flex p{
+	width:35%;
+	font-size: 18px;
+	font-weight: bold;
+	color:white;
+	text-align: right;
+}

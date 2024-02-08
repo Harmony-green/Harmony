@@ -1,0 +1,145 @@
+@charset "UTF-8";
+.mainarea{
+	width: 1140px;
+	height: 1200px;
+	padding-top: 45px;
+	padding-bottom: 120px;
+	margin: 0 auto;
+}
+h2{
+	padding-top: 15px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: -1.1px;
+    text-align: center;
+}
+.cartarea{
+	height: 850px;
+}
+.carttabarea{
+	height: 58px;
+	margin-bottom: auto;
+}
+.carttab{
+	width: 570px;
+	height: 58px;
+	border: 1px solid black;
+	align-items: center;
+}
+.cartarea a{
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+.goodsarea{
+	width: 790px;
+	height: 500px;
+}
+.cartContents>.detailWrap{
+	width: 786px;
+}
+.itemContainer {
+	display: flex;
+	width: 100%;
+	padding: 0 0 16px;
+}
+.itemContainer.checkbox-Container {
+	font-size: 0;
+	line-height: 32px;
+	letter-spacing: -.3px;
+	color: #333333;
+}
+.cartContents {
+	position: relative;
+	min-height: 390px;
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+.deleteBtnGroup{
+	margin-left: auto;
+}
+#sideArea.cartPriceWing {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 298px;
+	height: 100%;
+}
+.priceList dl {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 12px;
+	line-height: normal;
+}
+.priceList. dl dt {
+	position: relative;
+	width: 50%;
+	display: table-cell;
+	padding-top: 3px;
+	font-size: 14px;
+	color: #757575;
+	letter-spacing: -.3px;
+	vertical-align: top;
+	white-space: normal;
+}
+.priceList. dl dd {
+	font-size: 16px;
+	width: 50%;
+	display: table-cell;
+	position: relative;
+	text-align: right;
+	font-weight: 700;
+	word-break: break-all;
+	vertical-align: top;
+	line-height: 1.56;
+}
+#sideArea>.cartPriceWing>.priceWrap>.priceList {
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 18px;
+}
+#sideArea>.priceList>.dl{
+	position: relative;
+	width: 50%;
+	display: table-cell;
+	padding-top: 3px;
+	font-size: 14px;
+	color: #757575;
+	letter-spacing: -.3px;
+	vertical-align: top;
+	white-space: normal;}
+main {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.main-section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-top {
+	flex: 2; /* 메인 상단 섹션 크기 조절 */
+	background-color: #3498db;
+	color: white;
+	padding: 20px;
+}
+
+.sub-section {
+	flex: 1;
+	display: flex;
+	background-color: #2ecc71;
+	color: white;
+	padding: 20px;
+}
+
+.combined-section {
+	background-color: #e74c3c;
+	color: white;
+	padding: 20px;
+}

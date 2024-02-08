@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:replace="~{common/admin-layout::head}" />
+		<link rel="stylesheet" href="/css/admin/common-list.css">
+		<link rel="stylesheet" href="/css/admin/product-list.css">
+		<script src="/js/admin/admin-product-list.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".btn-edit").click(clickedBtnEdit);
+				$(".btn-cancel").click(clickedBtnCancel);
+				$(".btn-edit-done").click(clickedBtnEditDone);
+			});
+		</script>
+	</head>
+	<body>
+		<main class="flex">
+			<h1>상품 리스트</h1>
+			<th:block th:replace="~{common/admin-layout::admin-layout}" />
+			<section class="admin-right list-right">
+				<p class="admin-title">상품 리스트</p>
+				<div class="list-all">
+					<table>
+						<tr class="flex between list list-name">
+							<td>번호</td>
+							<td>상품명</td>
+							<td>가격</td>
+							<td>재고</td>
+							<td>카테고리</td>
+							<td>관리</td>
+						</tr>
+						<tr th:each="m :${list}" class="flex between list list-inner">
+							<td th:text="${m.no}">번호</td>
+							<td>
+								<span class = "default" th:text="${m.title}">제목</span>
+								<input class="edit title" type="text" th:value="${m.title}">
+							</td>
+							<td>
+								<span class = "default" th:text="${m.price}">가격</span>
+								<input class="edit price" type="text" th:value="${m.price}">
+							</td>
+							<td>
+								<span class = "default" th:text="${m.stock}">재고</span>
+								<input class="edit stock" type="text" th:value="${m.stock}">
+							</td>
+							<td>
+								<span class="default" th:text="${m.category}">카테고리</span>
+								<select class="edit category" name="category">
+									<option value="목걸이">목걸이</option>
+									<option value="귀걸이">귀걸이</option>
+									<option value="팔찌">팔찌</option>
+									<option value="반지">반지</option>
+								</select>
+							</td>
+							<td class="flex center">
+								<button class = "default  btn-edit" type="button">수정</button>
+								<button class="edit btn-cancel" type="button">취소</button>
+								<span class="edit span-margin"></span>
+								<button class="edit btn-edit-done" type="button">수정완료</button>
+								<input type="hidden" class="no" th:value="${m.no}" />
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

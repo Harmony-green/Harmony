@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/common/reset-css.css">
+	<link rel="stylesheet" href="/css/customer/cs.css">
+	<style>
+		.head3 ul>:nth-child(7) a:not(.user-center-tap) {
+			font-weight: bold;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="wrap flex between">
+			<section class="CS">
+				<ul class="CS1">
+					<li>고객센터</li>
+				</ul>
+				<ul class="CS2">
+					<li><a href="/faq">쇼핑 FAQ</a></li>
+					<hr color="silver" size="1px">
+					<li><a href="/info">공지사항</a></li>
+					<hr color="silver" size="1px">
+					<li><a href="/qna">1:1 문의하기</a></li>
+				</ul>
+				<ul class="CS3">
+					<li>하모니ON 고객센터</li>
+					<li><span class="CSB3">0000-0000</span>(유료)</li>
+					<li>월~금요일 09:00 ~ 18:00</li>
+					<li>주말,공휴일 휴무</li>
+				</ul>
+				<ul class="CS4">
+					<div class="CSA4">오프라인 매장안내</div>
+					<li>매장별 위치/연락처를 확인하세요.</li>
+					<div class="CSB4">
+						<li style="line-height:210%"><a href="#">하모니 쥬얼리</a></li>
+					</div>
+				</ul>
+				<hr color="silver" size="1px">
+				<div class="CS5">
+					<p>
+						<img src="/img/users/img_seller_zone.png" style="width:230px; height:136px;">
+					</p>
+				</div>
+				<div class="CS6">
+					<p>
+						<img src="/img/users/img_safe_center.png" style="width:230px; height:75px;">
+					</p>
+				</div>
+			</section>
+			<section class="SC">
+				<div class="SC0_1">
+
+				</div>
+				<div class="SC0">
+					<div class="SC0_1">
+						<img src="/img/common/harmony-logo.png" style="width:70px; height:50px;">
+					</div>
+					<div class="SC0_2">
+						하모니ON에게 물어보세요!
+					</div>
+				</div>
+				<ul class="SC1">
+					<li>FAQ 통합검색</li>
+				</ul>
+				<div class="SC2">
+					<div class="search">
+						<input type="text" placeholder="궁금하신 내용을 입력해 주세요.">
+						<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+					</div>
+					<div class="searcha">
+						<div class="searchb">
+							<a>자주 찾는 문의</a>
+						</div>
+						<div class="searchc">
+							<a href="#">교환반품A/S</a>
+							<a href="#">이벤트/혜택</a>
+							<a href="#">회원정보</a>
+						</div>
+					</div>
+				</div>
+				<ul class="SC3">
+					<li>쇼핑 FAQ TOP 5</li>
+					<a class="SCA3" href="#">전체보기 ></a>
+				</ul>
+				<div class="SC4">
+					<div class="SCA4">
+						<a href="#">[반품방법] 반품접수는 어떻게 하나요?</a></br>
+						<a href="#">[배송일정] 배송 진행상황은 어디서 조회하나요?</a></br>
+						<a href="#">[배송일정] 주문한 상품은 언제쯤 받을 수 있나요?</a></br>
+						<a href="#">[회원탈퇴] 회원탈퇴는 어떻게 하나요?</a></br>
+						<a href="#">[주문취소] 주문취소는 어떻게 해야 되나요?</a>
+					</div>
+				</div>
+				<ul class="SC5">
+					<li>하모니ON 고객센터</li>
+				</ul>
+				<ul class="SC6">
+					<li>
+
+					</li>
+				</ul>
+			</section>
+		</div>
+	</main>
+</body>
+
+</html>

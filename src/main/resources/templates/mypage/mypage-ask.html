@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+	<head>
+	    <th:block th:replace="~{common/mypage-layout::head}" />
+	    <link rel="stylesheet" href="/css/mypage/mypage-ask.css">
+	</head>
+	<body>
+	    <main>
+	        <section class="view-size mypage-main flex between">
+				<th:block th:replace="~{common/mypage-layout::mypage-layout-left}" />
+				<section class="mypage-rigth">
+					<th:block  th:replace="~{common/mypage-layout::mypage-layout-right}" />
+					<p class="ask-title">1:1 문의 내역</p>
+					<div class="all-ask flex between">
+						<div>
+							<p>총 문의</p>
+							<p>0</p>
+						</div>
+						<span></span>
+						<div>
+							<p>답변 완료</p>
+							<p>0</p>
+						</div>
+						<span></span>
+						<div>
+							<p>처리중</p>
+							<p>0</p>
+						</div>
+						<span></span>
+						<div>
+							<p>접수</p>
+							<p>0</p>
+						</div>
+					</div>
+				</section>
+			</section>
+	    </main>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "EUC-KR";
+
+.h-logo img {
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: auto;
+}
+
+.h-logo {
+	width: 584px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color: #ef2a23;
+	border: none;
+	width: 150px;
+	height: 40px;
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;
+	right: 10px;
+}

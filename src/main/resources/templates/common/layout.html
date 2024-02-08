@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="commonLayout(head, main)">
+	<head>
+		<link rel="stylesheet" href="/css/common/reset-css.css">
+		<script src="/webjars/jquery/jquery.min.js"></script>
+		<script src="/webjars/sockjs-client/1.5.1/sockjs.min.js"></script>
+		<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+		<script type="text/javascript" src="/js/common/header.js"></script>
+		<script type="text/javascript" src="/js/common/layout.js"></script>
+		<script type="text/javascript" src="/js/common/chat-bot.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<th:block th:replace="${head}">페이지마다 적용될 css,js resource</th:block>
+		<link rel="stylesheet" href="/css/common/header-footer.css">
+		<link rel="stylesheet" href="/css/common/chat-bot.css">
+		<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8if7242ay4"></script>
+	</head>
+	<body>
+		<th:block th:replace="~{common/header}">header섹션 적용</th:block>
+		<th:block th:replace="${main}">main섹션 적용</th:block>
+		<th:block th:replace="~{common/footer}">footer섹션 적용</th:block>
+		<aside>
+			<div class="chat-bot-icon flex center">
+				<a href="/cart" id="kart"></a>
+			</div>
+			<span></span>
+			<div class="chat-bot-icon flex center" id="open-chat">
+				<div id="chat-robot"></div>
+			</div>
+			<span></span>
+			<div class="go-up flex center" id="go-up">
+				<img src="/img/common/aside/up.svg">
+			</div>
+		</aside>
+		<script>
+			document.getElementById('go-up').addEventListener('click', () => {
+			  window.scrollTo({
+			    top: 0,
+			    left: 0,
+			    behavior: 'smooth'
+			  });
+			})
+		</script>
+		<section id="chat" class="chat-bot">
+			<div class="chat-bot-top flex between center">
+				<div class="top-left">
+					<div class="flex">
+						<img src="/img/common/aside/help_center.svg">
+						<p>HELP</p>
+					</div>
+				</div>
+				<div class="top-mid">
+					<p><b>하모니챗봇</b></p>
+				</div>
+				<div class="top-right">
+					<form class="flex">
+						<button id="disconnect" type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<div class="chat-bot-mid">
+				<div class="content answer flex">
+					<th:block sec:authorize="isAuthenticated()">
+						<div><span sec:authentication="principal.name">회원이름</span> 님 어서오세요 !</div>
+					</th:block>
+				</div>
+				<div id="greetings" class="content">
+				</div>
+			</div>
+			<div class="chat-bot-bottom flex">
+				<div class="flex home">
+					<img src="/img/common/aside/home.svg">
+				</div>
+				<form id="chat" class="textarea">
+					<input type="text" id="content" placeholder="질문을 입력하세요">
+					<button id="send" class="send" type="submit"></button>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+.add-banner-form .flex{
+	margin-bottom: 15px;
+	align-items: center;
+}
+.add-banner-form .flex div{
+	width:120px;
+	height:50px;
+	align-items: center;
+	display: flex;
+	border: 1px solid black;
+	padding-left: 10px;
+	margin-right: 20px;
+}
+.add-banner-form .flex input{
+	height:50px;
+}

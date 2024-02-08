@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.list-right{
+	display: block;
+	
+}
+.list-all{
+	padding:20px 0;
+}
+.list-title{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.list{
+	text-align: center;
+	border-bottom: 1px solid black;
+	padding-bottom: 20px;
+}
+.list-name{
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.list-inner{
+	margin-bottom: 30px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:replace="~{common/admin-layout::head}" />
+		<link rel="stylesheet" href="/css/admin/product-add.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script>
+			
+			
+			function changedImg(element){
+				//console.log($(element)[0].files[0]);
+				var idx=$(element).index();
+				console.log("idx: "+idx);
+				var formData = new FormData();
+				formData.append("goodsImg", $(element)[0].files[0]);
+				
+				
+				
+				$.ajax({
+					url:"/temp-upload",
+					data: formData,
+					type: "post",
+					contentType: false,
+					processData: false,
+					success: function(map){
+						//$(element).parents(".btn-file")
+						$(element).parent().css("background-image", `url(${map.url})`);
+						$(element).siblings(".tempKey").val(map.tempKey);
+						$(element).siblings(".orgName").val(map.orgName);
+						$(".main-img-plus").remove();
+					}
+				});
+			}
+			function changedImgSub(element){
+				//console.log($(element)[0].files[0]);
+				var idx=parseInt($(element).attr("idx"));
+				//console.log("idx: "+idx);
+				//console.log($(".upload-sub-img").length);
+				var formData = new FormData();
+				formData.append("goodsImg", $(element)[0].files[0]);
+				let num = $(".upload-sub-img").index(this);
+				var tag=`
+				<span class="file-wrap2 upload-sub-img">
+					<label class="btn-file">
+						<input type="file"  accept="image/*" idx="${idx+1}" onchange="changedImgSub(this)">
+						<input type="hidden" class="tempKey" name="tempKey">
+						<input type="hidden" class="orgName" name="orgName">
+						<input type="hidden" class="check" name="checkImg" value="0">
+						<span>+</span>
+					</label>
+				</span>
+				`
+				
+				$.ajax({
+					url:"/temp-upload",
+					data: formData,
+					type: "post",
+					contentType: false,
+					processData: false,
+					success: function(map){
+						//$(element).parents(".btn-file")
+						$(element).parent().css("background-image", `url(${map.url})`);
+						$(element).siblings(".tempKey").val(map.tempKey);
+						$(element).siblings(".orgName").val(map.orgName);
+						$(".img-plus").remove();
+						if($(".upload-sub-img").length<8 && ($(".upload-sub-img").length==idx)){
+							$(".sub-img").append(tag);
+						}else if($(".upload-sub-img").length>=8){
+							alert("서브이미지저장은 8장까지입니다!");
+						}
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<main class="flex">
+			<h1>상품 추가</h1>
+			<th:block th:replace="~{common/admin-layout::admin-layout}" />
+			<section class="admin-right">
+				<p class="admin-title">상품 등록</p>
+				<form class="pro-add" action="/productList" method="post" enctype="multipart/form-data">
+					<div class="flex">
+						<div>
+							<p>상품명</p>
+						</div>
+						<input type="text" name="name">
+					</div>
+					<div class="flex">
+						<div>
+							<p>상품가격</p>
+						</div>
+						<input type="text" name="price">
+					</div>
+					<div class="flex">
+						<div>
+							<p>재고</p>
+						</div>
+						<input type="text" name="stock">
+					</div>
+					<div class="flex no">
+						<div>
+							<p>대표 이미지</p>
+						</div>
+						<span class="file-wrap">
+							<label class="btn-file">
+								<input type="file"  accept="image/*" onchange="changedImg(this)">
+								<input type="hidden" class="tempKey" name="tempKey">
+								<input type="hidden" class="orgName" name="orgName">
+								<input type="hidden" class="check" name="checkImg" value="1">
+								<span class="main-img-plus">+</span>
+							</label>
+						</span>
+					</div>
+					
+					<div class="flex sub-img">
+						<div>
+							<p>서브 이미지</p>
+						</div>
+						<span class="file-wrap2 upload-sub-img">
+							<label class="btn-file">
+								<input type="file"  accept="image/*" idx="1" onchange="changedImgSub(this)">
+								<input type="hidden" class="tempKey" name="tempKey">
+								<input type="hidden" class="orgName" name="orgName">
+								<input type="hidden" class="check" name="checkImg" value="0">
+								<span>+</span>
+							</label>
+						</span>
+					</div>
+					<div class="flex no">
+						<div>
+							<p>상품설명</p>
+						</div>
+						<textarea name="content"></textarea>
+					</div>
+					<div class="flex ">
+						<div>
+							<p>카테고리</p>
+						</div>
+						<select class="category" name="category">
+							<option value="목걸이">목걸이</option>
+							<option value="귀걸이">귀걸이</option>
+							<option value="팔찌">팔찌</option>
+							<option value="반지">반지</option>
+						</select>
+					</div>
+					<p>
+						<button>전송</button>
+					</p>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>

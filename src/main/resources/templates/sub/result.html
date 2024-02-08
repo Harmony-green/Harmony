@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{common/layout :: commonLayout(~{this::head}, ~{this::main})}">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta charset="UTF-8">
+    <title>베스트</title>
+    <link rel="stylesheet" href="/css/sub/sub.css">
+</head>
+<body>
+<main>
+    <h1>검색결과페이지</h1>
+    <section class="title best">
+		<div th:unless="${#lists.isEmpty(list)}" class="title-box">
+			<p class="title-text search-text view-size">'<sapn th:text="${inputValue}"></sapn>' 의 검색결과입니다</p>
+		</div>
+		<div th:if="${#lists.isEmpty(list)}" class="empty-box title-box">
+			<div><p class="title-text search-text view-size">검색결과가 존재하지 않습니다.</p></div>
+		</div>
+	</section>
+	<section th:if="${#lists.isEmpty(list)}" class="view-size empty-back">
+		<button class="custom-btn btn-3">
+			<span><a href="/">돌아가기</a></span>
+		</button>
+	</section>
+	<section class="product view-size flex between">
+		
+		<div th:each="m :${list}" class="product-box">
+			<div class="img-box">
+				<img th:src="${m.mainImgUrl}">
+			</div>
+			<div class="flex center">
+				<a class="img-text">이름 : </a>
+				<a th:text="${m.title}" class="img-text">이름 : 상품1</a>
+			</div>
+			<div class="flex center">
+				<a class="img-text">가격 : </a>
+				<a th:text="${m.price}" class="img-text">가격 : 1000원</a>
+			</div>
+			<div class="hover-effect">
+				<a th:href="@{/product-info/{pk}(pk=${m.no})}" class="move-info">자세히보기</a>
+			</div>
+		</div>
+	</section>
+</main>
+</body>
+</html>

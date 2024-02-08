@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.mypage-main .mypage-left> :nth-child(5){
+	font-weight: bold;
+}
+.ask-title{
+	font-size: 1.8rem;
+	font-weight: bold;
+	padding-bottom: 45px;
+}
+.all-ask{
+	background-color: #eee;
+	height:100px;
+	align-items: center;
+}
+.all-ask div{
+	width:24%;
+	text-align: center;
+}
+.all-ask div :nth-child(1){
+	padding-bottom: 10px;
+}
+.all-ask div :nth-child(2){
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.all-ask span{
+	display: block;
+	height:50px;
+	width:1px;
+	background-color: #aaa;
+}

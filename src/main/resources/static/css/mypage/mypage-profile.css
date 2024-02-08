@@ -1,0 +1,192 @@
+@charset "UTF-8";
+.leftpadding{
+	padding-left: 150px;
+}
+.spanpadding{
+	padding-left: 30px;
+}
+.pPadding1{
+	padding-left: 20px;
+}
+.pPadding2{
+	padding-left: 51px;
+}
+.pPadding3{
+	padding-left: 36px;
+}
+.bold{
+	font: bold;
+}
+.profile-wrap{
+	font-size: 25px;
+	border-bottom: 1px solid #ced4da ;
+	padding-bottom: 25px;
+	width: 100%;
+}
+.profilep{
+	padding: 30px 0;
+	align-items: center;
+	border-bottom: 1px solid #eee ;
+}
+.profilep img{
+	height: 100px;
+	width:100px;
+}
+.profilep .namep{
+	margin-left: 400px;
+	height: 100px;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-left: 20px;
+}
+.profilep .namep div{
+	padding-top: 15px;
+	font-size: 20px;
+	width: 120px;
+}
+.profilep .namep button{
+	margin-bottom: 15px;
+	background-color: white;
+	border: 1px solid #ced4da;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+.profileinfo{
+	padding: 30px 0 0 0;
+	border-bottom: 1px solid #eee;
+}
+.profileinfo p{
+	font-size: 17px;
+}
+.profileinfo .sexual{
+	border-bottom: 1px solid #eee;
+}
+.profileinfo div p{
+	font-size: 15px;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.profileinfo div select{
+	margin-left: 20px;
+	padding-left: 5px;
+	width: 200px;
+	height: 40px;
+	border-radius: 7px;
+}
+.profileinfo .flex{
+	padding-bottom: 40px;
+}
+.profileinfo .span2{
+	margin-left: 50px;
+}
+.sexual {
+	height: 49px;
+}
+.profileinfo span label{
+/*	margin-top: 20px;*/
+	border: 1px solid #343b4d;
+	text-align: center;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 108px;
+	height: 47px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.profileinfo span .female{
+	margin-left: 20px;
+}
+.profileinfo span label input{
+	display: none;
+}
+.profileinfo .passc{
+	padding: 30px 0;
+	border-bottom: 1px solid #eee;
+}
+.profileinfo .passarea input{
+	margin-left: 20px;
+	margin-bottom: 30px;
+	width: 250px;
+	height: 30px;
+	border-radius: 7px;
+	border: 1px solid #868e96;
+	padding-left: 10px;
+}
+.profileinfo .passc p{
+	font-size: 17px;
+}
+.profileinfo .passc button{
+	background-color: #ef2a23;
+	border: none;
+	width: 150px;
+	height: 40px;
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;
+	right: 10px;
+}
+.profileinfo .passc button:active{
+	background-color: white;
+	border: 1px solid darkgreen;
+	color: darkgreen;
+}
+.submit{
+	justify-content: center;
+}
+.submit button{
+	width: 240px;
+	height: 50px;
+	border-radius: 6px;
+	margin: 40px auto 0;
+	cursor: pointer;
+	background-color: #ef2a23;
+	border: none;
+}
+.userinfo input[type=text]{
+	margin-left: 35px;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 7px;
+	font-size: 15px;
+	width: 170px;
+}
+.submit button a{
+	color: white;
+}
+.btn-file{
+	display: inline-flex;
+	width:100px;
+	height:100px;
+	border: 1px dashed black;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	background-color: #eee;
+	background-image: url("/img/mypage/smile.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+input[type=file]{
+	display: none;
+}
+.delete{
+	padding-top: 30px;
+}
+.delete button{
+	background-color: #ef2a23;
+	border: none;
+	width: 150px;
+	height: 40px;
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;
+	right: 10px;
+}

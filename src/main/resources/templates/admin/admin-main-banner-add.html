@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:replace="~{common/admin-layout::head}" />
+		<link rel="stylesheet" href="/css/admin/main-banner-add.css">
+		<link rel="stylesheet" href="/css/admin/product-add.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<main class="flex">
+			<h1>메인배너 추가</h1>
+			<th:block th:replace="~{common/admin-layout::admin-layout}" />
+			<section class="admin-right list-right">
+				<p class="admin-title">메인배너 등록</p>
+				<script>
+					function uploadedImg(element){
+						//console.log($(element)[0].files[0]);
+						var formData = new FormData();
+						formData.append("bannerImgs", $(element)[0].files[0]);
+						$.ajax({
+							url:"/banner-temp-upload",
+							data: formData,
+							type: "post",
+							contentType: false,
+							processData: false,
+							success: function(map){
+								//$(element).parents(".btn-file")
+								$(element).parent().css("background-image", `url(${map.url})`);
+								$(element).siblings(".tempKey").val(map.tempKey);
+								$(element).siblings(".orgName").val(map.orgName);
+							}
+						});
+					}
+				</script>
+				<form class="add-banner-form" action="/mainBannerList" method="post" enctype="multipart/form-data">
+					<div class="flex">
+						<div>
+							<p>배너타이틀</p>
+						</div>
+						<input type="text" name="title">
+					</div>
+					<div class="flex">
+						<div>
+							<p>배너서브타이틀</p>
+						</div>
+						<input type="text" name="sub">
+					</div>
+					<div class="flex">
+						<div>
+							<p>URL링크</p>
+						</div>
+						<input type="text" name="UrlLink">
+					</div>
+					
+					<div class="flex">
+						<div>
+							<p>순서</p>
+						</div>
+						<input type="text" name="orderNumber">
+					</div>
+					<div class="flex no">
+						<div>
+							<p>대표 이미지</p>
+						</div>
+						<span class="file-wrap">
+							<label class="btn-file">
+								<input type="file"  accept="image/*" onchange="uploadedImg(this)">
+								<input type="hidden" class="tempKey" name="tempKey">
+								<input type="hidden" class="orgName" name="orgName">
+								<span class="main-img-plus">+</span>
+							</label>
+						</span>
+					</div>
+					<p>
+						<button>전송</button>
+					</p>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
